@@ -42,9 +42,14 @@
     "grunt-contrib-concat": "^0.3.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-uglify": "^0.9.1",
-    "rollup-plugin-babel": "^2.6.1"
+    "grunt-eslint": "^19.0.0",
+    "grunt-rollup": "^0.8.0",
+    "rollup": "^0.34.10",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-uglify": "^1.0.1"
   },
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "es6build": "rollup -c"
   }
 }
