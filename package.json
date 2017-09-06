@@ -39,6 +39,9 @@
     "copyfiles": "^1.2.0",
     "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "prettier": "^1.6.1",
     "rexreplace": "^2.4.1",
     "rimraf": "^2.6.1",
     "rollup": "^0.49.2",
@@ -76,6 +79,7 @@
     "build:js": "babel src/js/main.js --no-babelrc | cross-env rexreplace \"<config.appId>\" $npm_package_config_appId | cross-env rexreplace \"<config.portalUrl>\" $npm_package_config_portalUrl | uglifyjs -c -o build/js/main.min.js",
     "copy": "copyfiles -u 1 src/oauth-callback.html \"src/assets/**\" \"src/css/**\" \"src/js/lib/**\" build/",
     "lint": "eslint src/js/*.js src/js/portal/*.js",
+    "prettier": "prettier src/js/main.js --write",
     "serve": "serve --port 8080 --open ./build"
   }
 }
